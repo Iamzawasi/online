@@ -1,0 +1,86 @@
+#login_popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(39, 37, 37, 0.534);
+  z-index: 110;
+  top: 0%;
+  font-family: sans-serif;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginBox {
+  background-color: rgba(248, 248, 248, 0.966);
+  width: 20rem;
+  height: 25rem;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  box-shadow: 0rem 1rem 1rem 0 rgb(65, 64, 64);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#login_popup input[type="text"],
+#signUp_popup input[type="text"],
+#signUp_popup input[type="email"],
+#signUp_popup input[type="tel"],
+#login_popup input[type="password"] {
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px rgba(128, 128, 128, 0.61);
+  width: 90%;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 5px;
+  font-family: sans-serif;
+}
+#login_popup input[type="button"] {
+  width: 93%;
+  height: 2.32rem;
+  border-radius: 5px;
+  background-color: rgba(24, 119, 242);
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: 0.1s;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+#login_popup input[type="submit"]:hover {
+  background-color: rgb(22, 102, 207);
+}
+#login_popup #forgottenPassword {
+  font-size: 0.9rem;
+  color: rgba(24, 119, 242);
+  text-decoration: none;
+}
+#createNewLink {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: rgb(66, 183, 42);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+#closePopupLogin {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  left: 45%;
+  top: 1.5%;
+}

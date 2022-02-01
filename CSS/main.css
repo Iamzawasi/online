@@ -1,0 +1,315 @@
+html {
+  color: rgb(31, 28, 25);
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    to top,
+    rgba(188, 221, 182, 0.99),
+    rgb(238 238 238 / 80%)
+  );
+}
+body {
+  background-image: linear-gradient(
+    to top,
+    rgba(188, 221, 182, 0.99),
+    rgb(238 238 238 / 80%)
+  );
+  height: 99%;
+  width: 99%;
+  position: absolute;
+  font-size: 16px;
+}
+
+header {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(36, 141, 20, 0.99),
+    rgba(49, 131, 80, 0.8)
+  );
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  border-radius: 10px;
+  z-index: 5;
+}
+header h1 {
+  display: inline;
+  margin-right: 5rem;
+  color: antiquewhite;
+  font-size: 1.8rem;
+}
+header div {
+  height: 2rem;
+  width: 40%;
+  display: flex;
+
+  background-color: white;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+header div input[type="text"] {
+  width: 95%;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+header div a {
+  position: relative;
+  right: 0%;
+  width: 5%;
+  border-radius: 0px;
+  margin-left: -1px;
+  box-shadow: 0;
+  border: 0px;
+}
+#searchButton {
+  padding: 1px;
+  width: 90%;
+  height: 90%;
+}
+.Login,
+.SignUp,
+.LogOut {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  border: aliceblue solid 1px;
+  padding: 0.5rem;
+}
+#RegPro {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  z-index: 100;
+  height: 98vh;
+  background-color: rgba(128, 128, 128, 0.452);
+  top: 10%;
+  right: 0;
+}
+#RegPro div {
+  /* top: 17%; */
+  background-color: rgb(155, 155, 155);
+  margin-left: 10px;
+}
+#RegPro div {
+  margin-top: 0.5rem;
+}
+#RegPro label {
+  width: 10rem;
+  color: rgb(1, 1, 58);
+  display: inline-block;
+}
+img {
+  width: 310px;
+}
+.LogOut {
+  visibility: hidden;
+}
+
+main {
+  display: flex;
+  /* flex-basis: 15%; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+}
+main .contents {
+  width: 280px;
+  height: 400px;
+  z-index: 100;
+  transition: all 0.5s;
+  margin: 0.5rem;
+  background-color: rgb(241, 253, 249);
+  border-radius: 0.3rem;
+}
+.contents img {
+  width: 99%;
+}
+.contents h2,
+p {
+  margin: 0 0 0 0.5rem;
+  padding: 0 0 0 0.5rem;
+  align-items: center;
+}
+@media screen and (max-width: 1160px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header div input[type="text"] {
+    width: 90%;
+  }
+  header div {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  header {
+    display: grid;
+    grid-template-columns: 3fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "PlateformName  LoginSale Login LogOut SignUp"
+      "HeaderSearchDiv HeaderSearchDiv HeaderSearchDiv HeaderSearchDiv HeaderSearchDiv";
+    padding: 0 1rem 0 1rem;
+  }
+  header h1 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  header > * {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  #PlateformName {
+    grid-area: PlateformName;
+  }
+  #LoginSale {
+    grid-area: LoginSale;
+    padding: 2px;
+  }
+  #Login {
+    grid-area: Login;
+    padding: 2px;
+  }
+  #LogOut {
+    grid-area: LogOut;
+    padding: 2px;
+  }
+  #SignUp {
+    grid-area: SignUp;
+    width: 65px;
+    padding: 2px;
+  }
+  #HeaderSearchDiv {
+    grid-area: HeaderSearchDiv;
+    width: 80%;
+  }
+  main .contents {
+    width: 220px;
+  }
+  .contents img {
+    width: 218px;
+  }
+  h2,
+  h3 {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+main .contents:hover {
+  transform: scale(1.05);
+  /* border: 2px solid rgb(211, 211, 211); */
+  z-index: 100;
+  background-color: rgb(243, 248, 231);
+  cursor: pointer;
+}
+.contents button {
+  border-radius: 30%;
+  border: none;
+  height: 20px;
+  background-color: rgb(196, 60, 60);
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+.contents button:hover {
+  transform: rotate(180deg);
+}
+#ProDetails {
+  position: fixed;
+  margin: 0 auto;
+  height: 65vh;
+  width: 75vw;
+  z-index: 105;
+  background-color: rgb(243, 247, 234);
+  top: 15%;
+  left: 10%;
+  border-radius: 5px;
+  /* visibility: hidden; */
+  padding: 5px;
+}
+
+#product_Image {
+  width: 48%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+#ProDetails > * {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#product_Image img {
+  width: 80%;
+}
+#product_Detail {
+  position: relative;
+
+  width: 30%;
+}
+#close {
+  display: inline;
+}
+#close #closeBtn {
+  width: 25px;
+  color: red;
+  border: none;
+  position: relative;
+  top: 1%;
+  cursor: pointer;
+}
+#product_Buying {
+  width: 20%;
+  position: relative;
+}
+#product_Buying button {
+  border: none;
+  background-color: rgb(248, 140, 51);
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  color: rgb(241, 235, 173);
+  font-weight: bold;
+  margin: 10px;
+  transition: all 0.5s;
+}
+#product_Buying button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#product_Buying .pDiscount {
+  font-weight: bold;
+  color: red;
+  margin: 1rem;
+}
+#product_Detail .fName {
+  font-weight: bold;
+}
+#product_Detail h2 {
+  margin-bottom: 0;
+}
+.hide {
+  visibility: hidden;
+}
+#product_Detail .pDescription {
+  margin: 0 0 4rem 0;
+}
