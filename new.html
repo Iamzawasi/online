@@ -1,77 +1,68 @@
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Apple</h2>
-  <p>This is very fresh fruit just a large number thats</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>briefcase</h2>
-  <p>info</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Shoes</h2>
-  <p>new one</p>
-  <h3>50</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Sofa</h2>
-  <p>NEW Excellent Conditions</p>
-  <h3>1500</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Sofa</h2>
-  <p>NEW Excellent Conditions</p>
-  <h3>1500</h3>
-</div>
-<br />
-<div class="contents">
-  <img src="./images/images/laptop1.jpg" />
-  <h2>Sofa</h2>
-  <p>NEW Excellent Conditions</p>
-  <h3>1500</h3>
-</div>
-<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="h1Text">Timers</h1>
+  <h2 id="dateprinting"></h2>
+  <input type="button" value=" Start Timer" onclick="Runn()">
+</body>
+  
+  <script>
+    //let VarInterval=setInterval(startimer, 1000);
+    let seconds=0;
+    function Runn(){
+      console.log("its runing");
+      for(i=0; i<1000; i++){
+        for(d=0;d<1000; d++){
+          h1Text=document.getElementById("h1Text");
+          h1Text.innerHTML=i;
+        }
+      }
+    }
+    MiliseconsCount=0; // 1000 miliseconds=1 seconds
+    function repeatoften(){
+      MiliseconsCount+=1;
+      if(MiliseconsCount>=60){
+        //h2Text.innerHTML= "dateprinting"
+        seconds=seconds+1;
+        h1Text.innerHTML=seconds;
+        MiliseconsCount=0;
+      }
+      requestAnimationFrame(repeatoften);
+    }
+    repeatoften();
+// let last = 0;
+// let num = 0;
+// let speed = 2;
+
+// function main(timeStamp) {
+//   console.log(timeStamp);
+//   let timeInSecond = timeStamp / 1000;
+
+//   if (timeInSecond - last >= speed) {
+//     last = timeInSecond;
+//     console.log(++num);
+//   }
+
+//   requestAnimationFrame(main);
+// }
+
+main();
+
+    function startimer(){
+      h1Text=document.getElementById("h1Text");
+      h2Text=document.getElementById("dateprinting");
+
+      h2Text.innerHTML= "dateprinting"
+      seconds=seconds+1;
+      h1Text.innerHTML=seconds;
+    }
+
+  </script>
+</body>
+</html>

@@ -113,3 +113,4 @@ function HideandShow() {
     form.style.visibility = "visible";
   }
 }
+var x = document.getElementById("nothing");

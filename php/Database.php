@@ -181,7 +181,7 @@ if(count($_REQUEST) >0 && isset($_REQUEST['pass']) ){
         $getPro=new Database($con);
         return $getPro->getProduct(false);
     }
-    
+    echo $_GET['app'];
 }
 
 

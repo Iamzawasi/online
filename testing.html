@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="resultt">Count numbers: <output id="result"></output></p>
+<h1 id="HackingSystem">hi</h1>   
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<!-- <script src="./webWorker.js"></script> -->
+<script>
+
+/// stack trace solution========funcktionen.php
+// $test=$row->var_name;
+// 		if((int)$test){
+// 			$row->var_name="'".$row->var_name."'";
+// 		}
+
+
+///ends here==================
+
+
+
+
+// let oldDate=new Date();
+// window.sessionCheckInterval=setInterval(CheckTimeDiff, 1000);  // Load the Interval every 10 seconds
+// function CheckTimeDiff(){
+//     let currentDate=new Date(); 
+//     difference=currentDate-oldDate; // check the time difference between two intervals
+//     if(difference>=3000){          // if the difference is equal or greater than 30 seconds call the safetycheck otherwise wait for next interval call
+//         document.getElementById("HackingSystem").innerHTML=currentDate-oldDate;
+//         oldDate=new Date();         // after calling safety check update the oldDate with new value
+//     }
+// }
+
+
+
+
+
+
+// var webWorker;
+
+// if (typeof(webworker)=="undefined"){
+//     webWorker= new Worker("webWorker.js");
+// }
+// webWorker.onmessage=function(e){
+//     console.log("hi there");
+//     document.getElementById("result").innerHTML=e.data;
+// };
+var webWker=new Worker("./webWorker.js")
+webWker.onmessage=function(e){
+    document.getElementById("HackingSystem").innerHTML=e.data
+}
+
+
+
+</script>
+
+</body>
+</html>
